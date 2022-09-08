@@ -3,16 +3,16 @@ p {
     color:blue;
 
 }
-h1[
+h1{
     font-family: Ferro Rosso;
     color: white;
-]
-    .Fred [
+}
+    .Fred {
         color:#ff2800;
-    ]
-    .Svart [
+    }
+    .Svart {
     color: black;
-    ]
+}
 
 
     header {
