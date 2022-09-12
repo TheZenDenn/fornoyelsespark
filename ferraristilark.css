@@ -1,7 +1,59 @@
-h1{
-font-family:Ferro Rosso ;
-color: white;
+p {
+    margin:0;
+    color:blue;
+
 }
-.Fred [
-    color:
-]
+h1{
+    font-family: Ferro Rosso;
+    color: white;
+}
+    .Fred {
+        color:#ff2800;
+    }
+    .Svart {
+    color: black;
+}
+
+
+    header {
+        background-color: #ff2800 ;
+        grid-area:header;
+        width: 200px;
+        top: 20px;
+        left: 20px;
+        }
+    nav{
+         background-color: violet;
+         grid-area:nav;
+        }
+    aside{
+         background-color: orange;
+         grid-area:aside;
+         display: flex;
+         flex-wrap: wrap;
+         
+        }
+    article {
+         
+         grid-area:article;
+        }
+    footer {
+        background-color: mediumseagreen;
+        grid-area:footer;
+    
+        
+    }
+    main{
+        position: absolute;
+        display: grid;
+        grid-template-rows: 15% 5% 70% 10%;
+        grid-template-columns: 20% 80%;
+    
+        grid-template-areas:
+        'header header'
+        'nav nav'
+        'aside article'
+        'footer footer';
+        width:100%;
+        height:100%;
+    }
