@@ -1,3 +1,9 @@
+@font-face{
+    font-family:'FerroRosso';
+    src: url('FerroRosso.ttf');
+}
+
+
 p {
     margin:0;
     color:blue;
