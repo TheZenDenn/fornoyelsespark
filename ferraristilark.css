@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'ferarrifont';
-    src: url(ferrarifont/FerroRosso.ttf);
+    src: url(FerroRosso.ttf);
 }
 
 p {
@@ -23,7 +23,6 @@ h1{
 
 header {
     background-color: #ff2800 ;
-    color: ;
     grid-area:header;
     display:flex;
     flex-flow: row wrap;
