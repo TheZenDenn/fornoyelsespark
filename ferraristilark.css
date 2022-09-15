@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'ferarrifont';
-    src: url(ferrarifont/FerroRosso.ttf);
+    src: url(FerroRosso.ttf);
 }
 
 p {
     margin:0;
-    color:blue;
+    color:rgb(255, 255, 255);
 
 }
 h1{
@@ -23,7 +23,6 @@ h1{
 
 header {
     background-color: #ff2800 ;
-    color: ;
     grid-area:header;
     display:flex;
     flex-flow: row wrap;
@@ -54,7 +53,8 @@ article {
      flex-flow: row wrap;
      align-items: center;
      padding: 5px;
-     background-image: url(ferrari.jpeg);
+     background-image: url(ferrariworld2.jpg);
+     background-size: cover;
      
     }
 footer {
@@ -63,6 +63,9 @@ footer {
     border-radius: 5px;
     grid-area:footer;
     padding: 5px;
+    justify-content:space-evenly;
+    display:flex;
+    flex-flow: row wrap;
 }
 .meny{
     text-decoration: none;
