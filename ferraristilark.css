@@ -47,13 +47,13 @@ aside{
      
     }
 article {
+     background-color: darkred;
      color: white;
      grid-area:article;
      display:flex;
      flex-flow: row wrap;
      align-items: center;
      padding: 5px;
-     background-image: url(ferrariworld2.jpg);
      background-size: cover;
      
     }
