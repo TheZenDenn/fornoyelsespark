@@ -1,19 +1,165 @@
 <!DOCTYPE html>
 <html lang="no">
 
-<head>
- <link rel="stylesheet" type="text/css" href="ferraristilark.css">
 
+<head>
     <title>fornøyelsespark</title>
     <meta charset="utf-8">
-    <style>
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="ferraristilark.css">
 </head>
+<style>
+    .ferrariworldheader{
+        font-size: 50px;
+        margin-top: 2.5%;
+        margin-left: 40%;
+        position: absolute;
+
+    }
+   header{
+    background-color: #ff2800 ;
+    grid-area:header;
+    display:flex;
+   
+    
+   }
+
+   @media screen and (max-width:500px){
+    main{
+        position:absolute;
+        display: grid;
+        grid-template-rows: 10% 5% 50% 25% 10%;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        'header'
+        'nav'
+        'article'
+        'aside'
+        'footer';
+         }
+        .container{
+        position: absolute;
+        width: auto;
+        top: -150px;
+        left: 10px;
+}
+}
+  
+   *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+/*Basic structure of slider*/
+.container{
+    width: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 56%;
+    left: 65%;
+    overflow: hidden;
+    border: 5px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: -1px 5px 15px black;
+}
+
+/*Area of images*/
+.wrapper{
+    width: 110%;
+    display: flex;
+    animation: slide 16s infinite;
+}
+
+img{
+    width: 100%;
+}
+/*Animation activated by keyframes*/
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  left: 80%;
+  top: 5%;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  left: 85%;
+  top: 4%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
 <body>
 <main>
+<header> <h1 class="ferrariworldheader">Ferrari World</h1>
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <a href="#">Home</a>
+          <a href="#">Tickets</a>
+          <a href="#">Info</a>
+          <a href="#">About Us</a>
+        </div>
+      </div>
 
-<header><h1>Ferrari world</h1></header>
+</header>
 
 <nav>
     <a href="CSS test.html" class="meny">Home</a>
@@ -21,14 +167,30 @@
     <a href="" class="meny">Info</a>
     <a href="" class="meny">About Us</a>
 </nav>
-<aside></aside>
-<article></article>
+<aside>
+       <h2>Rides:</h2>
+        <ul>
+            <p><br>Flying Aces<br>Turbo Track<br>Turbo Tower<br>Formula Rossa Junior<br>Junior Grand Prix</p>
+        </ul>
+</aside>
+<article>
+    <h2>Welcome to Ferrari World!</h2>
+    <div class="container">
+        <!--Area of the images-->
+           <div class="wrapper">
+              <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/98/f5/6c.jpg">
+              <img src="https://cdn-imgix-open.headout.com/MB/Themepark/Ferrari+World+Abu+Dhabi/Overview+Image/5.jpg?auto=compress%2Cformat&w=975&h=594&q=75&fit=crop&ar=16%3A10&fm=webp">
+              <img src="https://themeparkreports.files.wordpress.com/2019/09/ferrari-world-abu-dhabi-november-2015-3.jpg">
+              <img src="https://mediaim.expedia.com/localexpert/167160/64a4fed7-592b-481d-ad43-10791111361a.jpg?impolicy=resizecrop&rw=1005&rh=565">
+           </div>
+        
+        </div>
+</article>
 <footer>
     <p>© Copyright 2022</p>
     <p>dldcorp@gmail.com</p>
-
-
 </footer>
 </main>
 </body>
 </html>
+
