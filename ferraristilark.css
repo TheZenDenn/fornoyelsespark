@@ -15,6 +15,9 @@ p {
 .p2{
     font-size: 30px;
 }
+.p3{
+    font-size: 20px;
+}
 h1{
     font-family: 'ferarrifont';
     font-size: 50px;
@@ -23,19 +26,35 @@ h1{
 h2{
     font-family: 'ferarrifont';
 }
-    .Fred {
+.h3{
+    font-family: 'ferarrifont';
+    font-size: 30px;
+}
+.Fred {
         color:#ff2800;
-    }
-    .Svart {
+}
+.Svart {
     color: black;
 }
 ul{
     color: white;
 }
-
-
-
-
+.ferrariworldheader{
+    margin-left: 30%;
+    margin-top: 1%;
+    font-size: 80px;
+}
+.toprides{
+    margin-left: 7%;
+}
+.exp{
+    margin-left: 7%;
+}
+.pt{
+    color: white;
+    font-size: 20px;
+    margin-left: 7%;
+}
 header {
     background-color: #ff2800 ;
     grid-area:header;
