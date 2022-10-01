@@ -8,13 +8,15 @@
     <style>
 h1{
     font-family: 'ferarrifont';
-    color: black;
+    color: white;
 }
   
 a {
   color: whitesmoke;
 }
-
+header{
+    justify-content: center;
+}
 article{
     
     align-items: inherit;
@@ -22,29 +24,35 @@ article{
     flex-wrap: wrap;
     flex-flow: row wrap;
     display: grid;
-    grid-template-rows: 10% 80% 10%;
+    grid-template-rows:90% 10%;
     grid-template-columns: 50% 50%;
 
     grid-template-areas:
-    'header header'
     'article article'
     'footer footer';
-    grid-row-gap: 5px;
-    width:97.5%;
-    top: 1.25%;
-    height:97.5%;
-    left: 1.25%;
-    
+     
     
 }
+article > footer {
+    grid-row-gap: 0%;
+    padding: 0px;
+}
+
+article > article{
+    background-color: darkred;
+    grid-row-gap: 0%;
+    padding: 0px;
+}
 #pris1 {
-    margin-top: 55%;
+    margin-top: 70%;
     margin-left: 30%;
+    font-size: 20px;
 
 }
 #pris2 {
-    margin-top: 55%;
-    margin-left: 40%;
+    margin-top: 70%;
+    margin-left: 35%;
+    font-size: 20px;
 }
 
 article > footer{
@@ -81,17 +89,24 @@ main{
     
     height:100%;
 }
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
 #General{
-    margin-top:4%;
-    margin-left: -51%;
+    margin-top: 1.5%;
+    margin-left: 10%;
     position: absolute;
+    
 }
 
 #Annual{
-    margin-top:4%;
-    margin-left: 51%;
+    margin-top: 1.5%;
+    margin-left: 67%;
     position: absolute;
+    
 }
+
 #bilde1 {
     position: absolute;
     left: 3.5%;
@@ -106,9 +121,121 @@ main{
     width:40%;
 }
 @media screen and (max-width:1000px) {
+    main{
+    position: absolute;
+    display: grid;
+    grid-template-rows: 15% 5% 300% 10%;
+    grid-template-columns: 100%;
+
+    grid-template-areas:
+    'header'
+    'nav'
+    'article'
+    'footer';
+    
+    width:100%;
+    height:100%;
+    }
+
+    article{
+    
+    align-items: inherit;
+    display:flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+    display: grid;
+
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 100%;
+
+    grid-template-areas:
+    'article'
+    'footer';
+    }
     #bilde1 {
         width:80%;
         left:10%;
+        top:45%;
+    }
+    #pris1{
+        margin-left: 37%;
+        margin-top:65%;
+    }
+    #bilde2 {
+        width:80%;
+        left:10%;
+        top:170%;
+    }
+    #pris2{
+        margin-left: 35%;
+        margin-top:0%;
+    }
+    #General{
+        margin-left: 10%;
+    }
+    #Annual{
+        
+        margin-left: 65%;
+    }
+}
+@media screen and (max-width:500px) {
+    main{
+    position: absolute;
+    display: grid;
+    grid-template-rows: 15% 5% 200% 10%;
+    grid-template-columns: 100%;
+
+    grid-template-areas:
+    'header'
+    'nav'
+    'article'
+    'footer';
+    
+    width:100%;
+    height:100%;
+    }
+
+    article{
+    
+    align-items: inherit;
+    display:flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+    display: grid;
+
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 100%;
+
+    grid-template-areas:
+    'article'
+    'footer';
+    }
+    #bilde1 {
+        width:80%;
+        left:10%;
+        top:45%;
+    }
+    #pris1{
+        margin-left: 31%;
+        margin-top:80%;
+    }
+    #bilde2 {
+        width:80%;
+        left:10%;
+        top:130%;
+    }
+    #pris2{
+        margin-left: 20%;
+        margin-top:-20%;
+    }
+    #General{
+        margin-left: 15%;
+    }
+    #Annual{
+        margin-top: 110%;
+        margin-left: 27%;
     }
 }
     </style>
@@ -122,33 +249,39 @@ main{
 
 
 <nav>
-    <a href="CSS test.html" class="meny">Home</a>
-    <a href="Tickets.html" class="meny">Tickets</a>
-    <a href="" class="meny">Info</a>
-    <a href="" class="meny">About Us</a>
+    <p class="p2">Annual Pass</p>
 </nav>
 
 <img id="bilde1" src="silver-card-1493x840.jpg">
 <img id="bilde2" src="gold-card-1493x840.jpg">
 
-    
+<div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="CSS test.html">Home</a>
+      <a href="Tickets.html">Tickets</a>
+      <a href="Info.html">Info</a>
+      <a href="About Us.html">About Us</a>
+    </div>
+  </div>
 
 <article>
     <footer>
     <a href="Bilett.png" download>Ticket Example</a>
-</footer>
-<header>
+    </footer>
+<article>
     <a id="General" href="Tickets.html"><h2>General Admission</h2></a>
     <a id="Annual" href="Tickets2.html"><h2>Annual Pass</h2></a>
-</header>
-<article>
-    <span id="pris1"><h3>Single Day Ticket: <br> 30USD</h3></span>
-    <span id="pris2"><h3>Family And Friends Offer: <br>90USD</h3></span>
+    <span id="pris1"><h3>Silver Annual Pass: <br> USD 250</h3></span>
+    <span id="pris2"><h3>Family And Friends Offer: <br>USD 300</h3></span>
 </article>
 </article>
     
 
-<footer><a href="mailto:thebetterdld@gmail.com"><p>thebetterdld@gmail.com</p></a></footer>
+<footer>
+    <p>© Copyright 2022</p>
+    <a href="mailto:thebetterdld@gmail.com"><p>thebetterdld@gmail.com</p></a>
+</footer>
 
 
 
