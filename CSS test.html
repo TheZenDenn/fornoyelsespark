@@ -1,75 +1,177 @@
 <!DOCTYPE html>
 <html lang="no">
 
+
 <head>
     <title>fornøyelsespark</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="ferraristilark.css">
-    <style>
-
-header {
+</head>
+<style>
+   header{
     background-color: #ff2800 ;
     grid-area:header;
-    width: 200px;
-    top: 20px;
-    left: 20px;
+    display:flex;
+    
+   
+    
+   }
+   @media screen and (max-width:800px){
+    .ferrariworldheader{
+        font-size: 50px;
+        margin-left: 20%;
+        margin-top: 4%;
     }
-nav{
-     background-color: violet;
-     grid-area:nav;
-    }
-aside{
-     background-color: orange;
-     grid-area:aside;
-     display: flex;
-     flex-wrap: wrap;
-     
-    }
-article {
-     
-     grid-area:article;
-    }
-footer {
-    background-color: mediumseagreen;
-    grid-area:footer;
+   }
 
+   @media screen and (max-width:500px){
+    main{
+        position:absolute;
+        display: grid;
+        grid-template-rows: 20% 5% 40% 25% 10%;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        'header'
+        'nav'
+        'article'
+        'aside'
+        'footer';
+         }
+    .container{
+        position: absolute;
+        width: auto;
+        margin-top: -15%;
+        margin-left: -13%;
+    }
+    .ferrariworldheader{
+        margin-top: 5%;
+        margin-left: 10%;
+    }
     
 }
-main{
+  
+   *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+/*Basic structure of slider*/
+.container{
+    width: 45%;
     position: absolute;
-    display: grid;
-    grid-template-rows: 15% 5% 70% 10%;
-    grid-template-columns: 20% 80%;
-
-    grid-template-areas:
-    'header header'
-    'nav nav'
-    'aside article'
-    'footer footer';
-    width:100%;
-    height:100%;
-    
+    transform: translate(-50%,-50%);
+    top: 56%;
+    left: 65%;
+    overflow: hidden;
+    border: 5px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: -1px 5px 15px black;
 }
-    </style>
 
-</head>
+/*Area of images*/
+.wrapper{
+    width: 110%;
+    display: flex;
+    animation: slide 16s infinite;
+}
+
+img{
+    width: 100%;
+}
+/*Animation activated by keyframes*/
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+
+</style>
 <body>
 <main>
-
-<header><h1>Ferrari world</h1></header>
-
+<header> <h1 class="ferrariworldheader">Ferrari World</h1>
+<div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="CSS test.html">Home</a>
+      <a href="Tickets.html">Tickets</a>
+      <a href="Info.html">Info</a>
+      <a href="About Us.html">About Us</a>
+    </div>
+  </div>
+</header>
 <nav>
-    <a href="">Tickets</a>
-    <a href="">valg 2</a>
-    <a href="">valg 3</a>
-    <a href="">valg 4</a>
+    <p class="p2">Welcome to Ferrari World!</p>
 </nav>
-<aside>Aside</aside>
-<article>Article</article>
-<footer>Footer</footer>
+<aside>
+       <h2 class="h3">Top 5 Rides:</h2>
+        <ol class="toprides">
+            <p>
+                <li class="p3">Flying Aces</li>
+                <li class="p3">Turbo Tracks</li>
+                <li class="p3">Formula Rossa</li>
+                <li class="p3">Formula Rossa Junior</li>
+                <li class="p3">Junior Grand Prix</li>
+            </p>
+        </ol>
+        <br>
+        <br>
+        <h2 class="h3">Other experiences:</h2>
+        <ul class="exp">
+            <p class="p3">Driving experiences<br>Fast fun<br> The Ferrari Store<br>Ferrari Store Driving Experience</p>
+        </ul>
+        <br>
+        <br>
+        <h2 class="h3">Plan Your Visit:</h2>
+        <ul>
+            <a href="https://www.trivago.no/nb/srl/hotell-nær-ferrariworld-abu-dhabi?search=500-1845891;dr-20221007-20221008" class="pt">Trivago, (Overnatting, Hotell, Fly)</a>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g294013-d1940985-Reviews-Ferrari_World_Abu_Dhabi-Abu_Dhabi_Emirate_of_Abu_Dhabi.html" class="pt">Tripadvisor, (plan your next trip)</a>
+            <a href="https://www.airbnb.com/s/Abu-Dhabi-~-United-Arab-Emirates/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&price_filter_input_type=0&query=Abu%20Dhabi%20-%20United%20Arab%20Emirates&date_picker_type=calendar&place_id=ChIJufI-cg9EXj4RCBGXQZMuzMc&source=structured_search_input_header&search_type=autocomplete_click" class="pt">AirBnB, Abu Dhabi</a>
+        </ul>
 
-
-
+</aside>
+<article>
+    <h2>Welcome to Ferrari World!</h2>
+    <div class="container">
+        <!--Area of the images-->
+           <div class="wrapper">
+              <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/98/f5/6c.jpg">
+              <img src="https://cdn-imgix-open.headout.com/MB/Themepark/Ferrari+World+Abu+Dhabi/Overview+Image/5.jpg?auto=compress%2Cformat&w=975&h=594&q=75&fit=crop&ar=16%3A10&fm=webp">
+              <img src="https://themeparkreports.files.wordpress.com/2019/09/ferrari-world-abu-dhabi-november-2015-3.jpg">
+              <img src="https://mediaim.expedia.com/localexpert/167160/64a4fed7-592b-481d-ad43-10791111361a.jpg?impolicy=resizecrop&rw=1005&rh=565">
+           </div>
+        
+        </div>
+</article>
+<footer>
+    <p>© Copyright 2022</p>
+    <a href="mailto:thebetterdld@gmail.com"><p>thebetterdld@gmail.com</p></a>
+</footer>
 </main>
 </body>
 </html>
