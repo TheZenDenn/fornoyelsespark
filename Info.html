@@ -7,12 +7,7 @@
     <link rel="stylesheet" type="text/css" href="ferraristilark.css">
 </head>
 <style>
-  @media screen and (max-width: 768px) {
-
-  }
-  @media screen and (max-width: 425px) { 
-    
-  }
+ 
 .accordion {
   background-color: #ff2800;
   color:white;
@@ -46,7 +41,7 @@
   color: black;
   float: right;
   margin-left: 5px;
-  font-size: 25px;
+  font-size: 30px;
   
 }
 
@@ -77,7 +72,7 @@ aside{
 main{
     position: absolute;
     display: grid;
-    grid-template-rows: 15% 5% 100vh 10vh;
+    grid-template-rows: 15% 5% 145% 10%;
     grid-template-columns: 50% 50%;
 
     grid-template-areas:
@@ -86,6 +81,35 @@ main{
     'aside aside'
     'footer footer';     
 }
+@media screen and (max-width: 400px) {
+    .faq{
+      font-size: 10px;
+    }
+
+
+  .accordion:after {
+  content: '\002B';
+  font-size: 13px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+  font-size: 60px;
+  
+}
+
+    main{
+    position: absolute;
+    display: grid;
+    grid-template-rows: 15% 5% 50% 10%;
+    grid-template-columns: 50% 50%;
+
+    grid-template-areas:
+    'header header'
+    'nav nav'
+    'aside aside'
+    'footer footer';     
+}
+  }
 
 </style>
 <body>
@@ -95,26 +119,23 @@ main{
 <header><h1>Ferrari World</h1></header>
 
 <nav>
-    <a href="CSS test.html" class="meny">Home</a>
-    <a href="Tickets.html" class="meny">Tickets</a>
-    <a href="" class="meny">Info</a>
-    <a href="" class="meny">About Us</a>
+  <p class="headerfaq">These are our Frequently Asked Questions!</p>
 </nav>
 
 <aside>
 
     <h2 class="faq">FAQ</h2>
-<button class="accordion">Can i buy tickets at the park entrance?</button>
+<button class="accordion"><b>Can i buy tickets at the park entrance?</b></button>
 <div class="panel">
   <p>Tickets can be purchased at the park entrance. However, it is recommended that tickets are purchased online.</p>
 </div>
 
-<button class="accordion">Which shows can I currently watch at the Park?</button>
+<button class="accordion"><b>Which shows can I currently watch at the Park?</b></button>
 <div class="panel">
   <p>All our show are currently cancelled due to covid-19.</p>
 </div>
 
-<button class="accordion">Are all the restaurants open at the Park?</button>
+<button class="accordion"><b>Are all the restaurants open at the Park?</b></button>
 <div class="panel">
   <p>The following restaurants are currently open for dining:</p>
   <ul>
@@ -133,7 +154,7 @@ main{
   </ul>
 </div>
 
-<button class="accordion">Are refunds possible?</button>
+<button class="accordion"><b>Are refunds possible?</b></button>
 <div class="panel">
 <ul>
   <li>in the event of a cancellation on, or before, the date  you scheduled Park visit, a full refund will be provided.</li>
@@ -141,7 +162,7 @@ main{
 </ul>
 </div>
 
-<button class="accordion">What is the validity period of tickets?</button>
+<button class="accordion"><b>What is the validity period of tickets?</b></button>
 <div class="panel">
 <p>Entry tickets to Ferrari World are valid for one entry to the park on the selected date of visit</p>
 </div>
