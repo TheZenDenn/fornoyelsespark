@@ -40,8 +40,6 @@ ul{
     color: white;
 }
 .ferrariworldheader{
-    margin-left: 30%;
-    margin-top: 1%;
     font-size: 80px;
 }
 .toprides{
@@ -59,6 +57,8 @@ header {
     background-color: #ff2800 ;
     grid-area:header;
     display:flex;
+    align-items: center;
+    justify-content: center;
     
    
     }
